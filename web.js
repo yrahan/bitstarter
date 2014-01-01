@@ -3,10 +3,8 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var buffer = fs.readFileSync('/home/ubuntu/workspace/bitstarter/index.html', function (err, data) {
-      if (err) throw err;
-        console.log(data);
-});
+var buffer = fs.readFileSync('/home/ubuntu/workspace/bitstarter/index.html');
+
 
 app.get('/', function(request, response) {
   response.send('Hello World 2!');
